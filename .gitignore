@@ -1,0 +1,6 @@
+echo ".DS_Store
+*.pyc
+*.tmp
+*.backup
+*./unodir/
+" > .gitignore
