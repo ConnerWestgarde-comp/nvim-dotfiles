@@ -31,6 +31,10 @@ return {
       -- Key mappings for LSP functionality:
       -- K: Show hover documentation
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.cmd([[autocmd CursorHold * lua vim.lsp.buf.hover()]])
+      vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]])
+      vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 
       -- gd: Go to definition
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
