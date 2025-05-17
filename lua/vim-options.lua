@@ -19,4 +19,7 @@ vim.keymap.set("n", "<leader>tt", theme_toggle.toggle, { desc = "Toggle Theme" }
 vim.keymap.set("n", "<leader>x", function()
   require("toggleterm").toggle()
 end, { desc = "Toggle Terminal" })
+
+vim.cmd [[autocmd! CursorHold * lua vim.diagnostic.config({ virtual_lines = { only_current_line = true } })]]
+
 vim.wo.number = true
